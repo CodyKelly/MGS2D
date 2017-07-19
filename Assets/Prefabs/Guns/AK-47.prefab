@@ -281,7 +281,7 @@ MonoBehaviour:
   muzzleFlashTime: 0
   muzzleFlashIntensity: 3
   muzzleLight: {fileID: 108683222830230172}
-  kickbackLength: 0.05
+  kickbackLength: 0.1
 --- !u!212 &212052181708839252
 SpriteRenderer:
   m_ObjectHideFlags: 1
