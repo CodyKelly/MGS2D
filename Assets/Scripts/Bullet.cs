@@ -5,6 +5,7 @@ public class Bullet : MonoBehaviour {
 
     public float speed;
     public float liveTime;
+    public bool destroyOnImpact = true;
 
     private float startTime;
 
@@ -13,7 +14,7 @@ public class Bullet : MonoBehaviour {
         startTime = Time.time;
     }
 
-	void Update ()
+	void FixedUpdate ()
     {
         if (Time.time - startTime > liveTime)
         {
@@ -22,4 +23,9 @@ public class Bullet : MonoBehaviour {
         Vector3 movement = Vector2.up * Time.deltaTime * speed;
         transform.Translate(movement);
 	}
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Destroy(gameObject);
+    }
 }

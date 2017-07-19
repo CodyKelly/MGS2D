@@ -20,6 +20,7 @@ public class Gun : Weapon
         if (Input.GetMouseButton(0) && Time.time - attackCooldown > lastAttackTime)
         {
             Attack();
+            GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().shotsFired++;
         }
         if (Time.time - muzzleFlashTime > lastAttackTime)
         {
