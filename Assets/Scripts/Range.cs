@@ -14,9 +14,9 @@ public class Range : MonoBehaviour
         BoxCollider2D collider = GetComponent<BoxCollider2D>();
         collider.size = new Vector2(2, length);
         collider.offset = new Vector2(0, (float)((float)-length / 2f));
-        for (int x = 0; x < length; x++)
+        for (int y = 0; y < length; y++)
         {
-            GameObject newPiece = Instantiate(rangePiece, new Vector3(0, -x - 0.5f), Quaternion.identity);
+            GameObject newPiece = Instantiate(rangePiece, new Vector3(transform.position.x, transform.position.y - y - 0.5f), Quaternion.identity);
             newPiece.transform.SetParent(spritesHolder);
         }
     }

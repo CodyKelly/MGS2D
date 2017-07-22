@@ -287,7 +287,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 114085094011305102}
-  length: 20
+  length: 10
   spritesHolder: {fileID: 4207278441694540}
   rangePiece: {fileID: 1831205097124292, guid: 41992db35c4db7e47b2250e059efef2a, type: 2}
 --- !u!212 &212053997703495200
