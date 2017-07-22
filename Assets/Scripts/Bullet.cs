@@ -5,6 +5,7 @@ public class Bullet : MonoBehaviour {
 
     public float speed;
     public float liveTime;
+    public float hitForce;
     public float rayLength;
     public LayerMask layerMask;
     public bool destroyOnImpact = true;
@@ -24,7 +25,13 @@ public class Bullet : MonoBehaviour {
 
         if (hit.collider != null && hit.collider.gameObject.tag != "Player")
         {
-            Debug.Log(hit.collider.gameObject.name);
+            Rigidbody2D otherRigidbody = hit.collider.gameObject.GetComponent<Rigidbody2D>();
+
+            if (otherRigidbody != null)
+            {
+                otherRigidbody.AddForceAtPosition(transform.up * hitForce, hit.point);
+            }
+
             Destroy(gameObject);
         }
 

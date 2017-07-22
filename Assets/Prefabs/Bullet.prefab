@@ -146,6 +146,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 60
   liveTime: 5
+  hitForce: 10
   rayLength: 1
   layerMask:
     serializedVersion: 2
