@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212000011362621498}
   - component: {fileID: 96000012388134422}
   - component: {fileID: 114000010875495914}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Bullet
   m_TagString: Bullet
   m_Icon: {fileID: 0}
@@ -51,7 +51,7 @@ TrailRenderer:
   m_GameObject: {fileID: 1000013305143420}
   m_Enabled: 1
   m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_ReceiveShadows: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 0
@@ -165,7 +165,7 @@ SpriteRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2a1ecf8b30f8d914d83d4467e39b6472, type: 2}
+  - {fileID: 2100000, guid: dd2043e5cd5311e4fbe905ebe0644ed1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

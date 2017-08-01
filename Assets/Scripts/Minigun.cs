@@ -10,7 +10,7 @@ public class Minigun : Gun
         Instantiate<GameObject>(bulletPrefab, bulletSpawnPoint.position, GetBulletAngle());
         audioSource.pitch = Random.Range(0.98f, 1.02f);
         audioSource.PlayOneShot(audioClip);
-        muzzleLight.intensity = muzzleFlashIntensity;
+        muzzleLight.enabled = true;
         transform.parent.Translate(Vector3.up * -kickbackLength);
     }
 }

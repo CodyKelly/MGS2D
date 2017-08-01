@@ -23,13 +23,18 @@ public class Bullet : MonoBehaviour {
     {
         RaycastHit2D hit = Physics2D.Raycast(transform.position, -Vector2.up, rayLength, layerMask);
 
-        if (hit.collider != null && hit.collider.gameObject.tag != "Player")
+        if (hit.collider != null)
         {
             Rigidbody2D otherRigidbody = hit.collider.gameObject.GetComponent<Rigidbody2D>();
 
             if (otherRigidbody != null)
             {
                 otherRigidbody.AddForceAtPosition(transform.up * hitForce, hit.point);
+            }
+
+            if (hit.collider.gameObject.tag == "Zombie")
+            {
+                hit.collider.gameObject.GetComponent<zombie>().health -= 10;
             }
 
             Destroy(gameObject);

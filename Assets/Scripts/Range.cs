@@ -18,6 +18,7 @@ public class Range : MonoBehaviour
         {
             GameObject newPiece = Instantiate(rangePiece, new Vector3(transform.position.x, transform.position.y - y - 0.5f), Quaternion.identity);
             newPiece.transform.SetParent(spritesHolder);
+            newPiece.layer = LayerMask.NameToLayer("Decorations");
         }
     }
 

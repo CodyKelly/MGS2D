@@ -8,7 +8,7 @@ public class Gun : Weapon
     public float angleVariancy;
     public float muzzleFlashTime;
     public float muzzleFlashIntensity;
-    public Light muzzleLight;
+    public MeshRenderer muzzleLight;
     public float kickbackLength;
 
     void FixedUpdate ()
@@ -17,14 +17,14 @@ public class Gun : Weapon
         {
             t.position = transform.parent.position;
         }
-        if (Input.GetMouseButton(0) && Time.time - attackCooldown > lastAttackTime)
+        if (Input.GetButton("Fire1") && Time.time - attackCooldown > lastAttackTime)
         {
             Attack();
             GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().shotsFired++;
         }
         if (Time.time - muzzleFlashTime > lastAttackTime)
         {
-            muzzleLight.intensity = 0f;
+            muzzleLight.enabled = false;
         }
     }
 
@@ -34,7 +34,7 @@ public class Gun : Weapon
         Instantiate<GameObject>(bulletPrefab, bulletSpawnPoint.position, GetBulletAngle());
         audioSource.pitch = Random.Range(0.98f, 1.02f);
         audioSource.PlayOneShot(audioClip);
-        muzzleLight.intensity = muzzleFlashIntensity;
+        muzzleLight.enabled = true;
         foreach (Transform t in transform.parent)
         {
             t.Translate(Vector3.up * -kickbackLength);
