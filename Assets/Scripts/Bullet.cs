@@ -21,7 +21,7 @@ public class Bullet : MonoBehaviour {
 
 	void FixedUpdate ()
     {
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, -Vector2.up, rayLength, layerMask);
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.forward, rayLength, layerMask);
 
         if (hit.collider != null)
         {
@@ -29,7 +29,7 @@ public class Bullet : MonoBehaviour {
 
             if (otherRigidbody != null)
             {
-                otherRigidbody.AddForceAtPosition(transform.up * hitForce, hit.point);
+                otherRigidbody.AddForceAtPosition(transform.forward * hitForce, hit.point);
             }
 
             if (hit.collider.gameObject.tag == "Zombie")
