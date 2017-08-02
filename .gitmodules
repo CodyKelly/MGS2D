@@ -1,6 +1,3 @@
-[submodule "Light2D"]
-	path = Light2D
-	url = git@github.com:CodyKelly/Light2D.git
 [submodule "Assets/Light2D"]
 	path = Assets/Light2D
 	url = git@github.com:CodyKelly/Light2D.git
