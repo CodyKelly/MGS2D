@@ -71,8 +71,7 @@ public class zombie : MonoBehaviour
 
     private void die()
     {
-        gameObject.GetComponent<BoxCollider2D>().enabled = false;
-        gameObject.GetComponent<SpriteRenderer>().enabled = false;
+        Destroy(gameObject);
     }
 
 }

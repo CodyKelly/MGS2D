@@ -44,6 +44,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: CeilingBackground
+    uniqueID: 2848363759
+    locked: 0
+  - name: CeilingForeground
+    uniqueID: 3666918287
+    locked: 0
   - name: BelowPlayer
     uniqueID: 2812774537
     locked: 0
@@ -55,4 +61,7 @@ TagManager:
     locked: 0
   - name: Head
     uniqueID: 1031590279
+    locked: 0
+  - name: AbovePlayer
+    uniqueID: 453542153
     locked: 0
